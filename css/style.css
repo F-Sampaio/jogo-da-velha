@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+
+/* Corpo */
+body {
+    background-color: #D5DBDB;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+/* casas */
+
+.col{
+    height: 80px;
+    border: 1px solid black;
+}
+
+.tabela {
+    padding-top: 100px;
+    padding-left: 500px;
+}
+
+
+/* rodape */
+.page-footer {
+    background-color: #a9a9a9;
+    color: #000000;
+    bottom: 0;
+}
+
+.page-footer p a{
+    color: #000000;
+}
+
+.page-footer p a:hover{
+    color: #000000;
+}
