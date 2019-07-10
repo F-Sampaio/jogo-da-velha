@@ -15,7 +15,7 @@
 <body>
 
         <div class="row">
-                <div class="col s12 m12 l12">
+                <div class="col s12 m12 l12 offset-l2">
                     <div class="card blue-grey darken-1">
                         <div class="card-content white-text">
                             <span class="card-title">Jogo da Velha</span>
@@ -34,20 +34,38 @@
 
             
         <div class="container">
-            <div class="row center" id="linha1">
-                    <div class="col s3 m2 l1 offset-l5" id="l1c1">1</div>
-                    <div class="col s3 m2 l1" id="l1c2">2</div>
-                    <div class="col s3 m2 l1" id="l1c3">3</div>
+            <div class="row center" id="linha1" onclick="principal()">
+                    <div class="col s3 m2 l1 offset-l5" id="l1c1">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l1c2">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l1c3">
+                        <p class="valorCasa">teste</p>
+                    </div>
             </div>
-            <div class="row center" id="linha2">
-                    <div class="col s3 m2 l1 offset-l5" id="l2c1">1</div>
-                    <div class="col s3 m2 l1" id="l2c2">2</div>
-                    <div class="col s3 m2 l1" id="l2c3">3</div>
+            <div class="row center" id="linha2" onclick="principal()">
+                    <div class="col s3 m2 l1 offset-l5" id="l2c1">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l2c2">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l2c3">
+                        <p class="valorCasa">teste</p>
+                    </div>
             </div>
-            <div class="row center" id="linha3">
-                    <div class="col s3 m2 l1 offset-l5" id="l3c1">1</div>
-                    <div class="col s3 m2 l1" id="l3c2">2</div>
-                    <div class="col s3 m2 l1" id="l3c3">3</div>
+            <div class="row center" id="linha3" onclick="principal()">
+                    <div class="col s3 m2 l1 offset-l5" id="l3c1">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l3c2">
+                        <p class="valorCasa">teste</p>
+                    </div>
+                    <div class="col s3 m2 l1" id="l3c3">
+                        <p class="valorCasa">teste</p>
+                    </div>
             </div>
         </div>
     </main>
@@ -56,5 +74,8 @@
     <footer class="page-footer center">
             <p id="footerText">Desenvolvido por <a href="https://github.com/F-Sampaio" target="_blank">Franklin Sampaio - 2019</a></p>
     </footer>
+
+
+    <script src="js/funcoes.js"></script>
 </body>
 </html>
