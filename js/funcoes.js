@@ -1,3 +1,4 @@
+var movimento = 0;
 function principal() {
 
     regrasJogo();
@@ -7,19 +8,26 @@ function principal() {
 function regrasJogo() {
 
     var elementoId = pegarElemento(event);
-
-    console.log(elementoId);
-    // var elementoFilho = document.getElementById(elementoId).hasChildNodes();
-
-
-
-    // console.log(elementoFilho);
-
-    // var elementoFilho = document.getElementById(elementoId).hasChildNodes();
+    var elementoTexto = document.getElementById(elementoId);
     
-  //Corrigir
-    // vez();
-    // vez() == 0 ? console.log('Play 1') : console.log('Play 2');
+
+    if (movimento == 0){
+            if (elementoTexto = document.getElementById(elementoId).innerHTML != '') {
+                 elementoTexto = document.getElementById(elementoId).innerHTML = 'X'
+            } else {
+                alert(`Casa já preenchida!`);
+            }
+    } else {
+            if (elementoTexto = document.getElementById(elementoId).innerHTML != ''){
+                elementoTexto = document.getElementById(elementoId).innerHTML = 'O';
+            } else {
+                alert(`Casa já preenchida`);
+            }
+    }
+
+   
+  movimento = 1 - movimento;
+//   (movimento == 0) ? console.log('O') : console.log('X');
 }
 
 function pegarElemento(event){
@@ -28,11 +36,4 @@ function pegarElemento(event){
 
     var eleId = event;
     return eleId;
-}
-
-function vez(){
-    //0 = X & 1 = O
-    var movimento = 0;
-    movimento = 1 - movimento;
-    return movimento;
 }
