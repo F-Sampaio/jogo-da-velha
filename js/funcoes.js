@@ -26,9 +26,6 @@ function regrasJogo() {
             }
             console.log('player 2');
     }
-    else {
-
-    }
 
    
   movimento = 1 - movimento;
