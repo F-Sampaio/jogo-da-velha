@@ -1,34 +1,26 @@
 var movimento = 0;
 function principal() {
-
     regrasJogo();
-    
 }
 
 function regrasJogo() {
 
     var elementoId = pegarElemento(event);
     var elementoTexto = document.getElementById(elementoId);
+    console.log(elementoTexto);
+
     
 
     if (movimento == 0){
-            if (elementoTexto = document.getElementById(elementoId).innerHTML == "") {
-                alert(`Casa já preenchida!`);
-            } else {
-                elementoTexto = document.getElementById(elementoId).innerHTML = 'X'
-            }
-            console.log('player 1');
-    } else if(movimento == 1) {
-            if (elementoTexto = document.getElementById(elementoId).innerHTML == ""){
-                alert(`Casa já preenchida`);
-            } else {
-                elementoTexto = document.getElementById(elementoId).innerHTML = 'O';
-            }
-            console.log('player 2');
+            elementoTexto.innerHTML = 'X';
+
+
+    } else if (movimento == 1) {
+            elementoTexto.innerHTML = 'O';
     }
 
-   
-  movimento = 1 - movimento;
+    movimento = 1 - movimento;
+   console.log(movimento);
 }
 
 function pegarElemento(event){
@@ -37,4 +29,9 @@ function pegarElemento(event){
 
     var eleId = event;
     return eleId;
+}
+// FIX ME
+function resetar(){
+    // var limparElementos = document.querySelectorAll('div.container, div.row, div.col');
+    // return limparElementos.innerHTML = "";
 }
