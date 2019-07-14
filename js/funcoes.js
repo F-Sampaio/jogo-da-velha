@@ -12,22 +12,26 @@ function regrasJogo() {
     
 
     if (movimento == 0){
-            if (elementoTexto = document.getElementById(elementoId).innerHTML != '') {
-                 elementoTexto = document.getElementById(elementoId).innerHTML = 'X'
-            } else {
+            if (elementoTexto = document.getElementById(elementoId).innerHTML == "") {
                 alert(`Casa já preenchida!`);
-            }
-    } else {
-            if (elementoTexto = document.getElementById(elementoId).innerHTML != ''){
-                elementoTexto = document.getElementById(elementoId).innerHTML = 'O';
             } else {
-                alert(`Casa já preenchida`);
+                elementoTexto = document.getElementById(elementoId).innerHTML = 'X'
             }
+            console.log('player 1');
+    } else if(movimento == 1) {
+            if (elementoTexto = document.getElementById(elementoId).innerHTML == ""){
+                alert(`Casa já preenchida`);
+            } else {
+                elementoTexto = document.getElementById(elementoId).innerHTML = 'O';
+            }
+            console.log('player 2');
+    }
+    else {
+
     }
 
    
   movimento = 1 - movimento;
-//   (movimento == 0) ? console.log('O') : console.log('X');
 }
 
 function pegarElemento(event){
