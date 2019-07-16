@@ -44,7 +44,11 @@ function verificar(){
         // Verifica diagonal
         ((l1c1 != '') && (l2c2 != '') && (l3c3 != '') && (l1c1 == l2c2) && (l2c2 == l3c3)) ||
         ((l1c3 != '') && (l2c2 != '') && (l3c1 != '') && (l1c3 == l2c2) && (l2c2 == l3c1))) {
-        alert('Parabéns, ganhou!');
+          if  (valor == 'O') {
+              document.getElementById('mostradorVencedor').innerHTML = 'X';
+          } else {
+            document.getElementById('mostradorVencedor').innerHTML = 'O';
+          }
         resetar()
     }
 }
