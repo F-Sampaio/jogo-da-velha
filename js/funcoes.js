@@ -1,37 +1,60 @@
 var movimento = 0;
+var valor = 'X';
 function principal() {
-    regrasJogo();
+    jogo(casa);
 }
 
-function regrasJogo() {
-
-    var elementoId = pegarElemento(event);
-    var elementoTexto = document.getElementById(elementoId);
-    console.log(elementoTexto);
-
-    
-
-    if (movimento == 0){
-            elementoTexto.innerHTML = 'X';
+function jogo(casa){
 
 
-    } else if (movimento == 1) {
-            elementoTexto.innerHTML = 'O';
+     elementoClicado = document.getElementById(casa).innerHTML;
+        if(elementoClicado == 'X' || elementoClicado == 'O'){
+            alert('Casa já preenchida');
+        } else {
+            document.getElementById(casa).innerHTML = valor;
+            if (valor == 'X') {
+                valor = 'O';
+            } else {
+                valor = 'X';
+            }
+        }
+}
+
+
+function verificar(){
+    l1c1 = document.getElementById('l1c1').innerHTML;
+    l1c2 = document.getElementById('l1c2').innerHTML;
+    l1c3 = document.getElementById('l1c3').innerHTML;
+    l2c1 = document.getElementById('l2c1').innerHTML;
+    l2c2 = document.getElementById('l2c2').innerHTML;
+    l2c3 = document.getElementById('l2c3').innerHTML;
+    l3c1 = document.getElementById('l3c1').innerHTML;
+    l3c2 = document.getElementById('l3c2').innerHTML;
+    l3c3 = document.getElementById('l3c3').innerHTML;
+
+    if (
+        // Verifica linha
+        ((l1c1 != '') && (l1c2 != '') && (l1c3 != '') && (l1c1 == l1c2) && (l1c2 == l1c3)) ||
+        ((l2c1 != '') && (l2c2 != '') && (l2c3 != '') && (l2c1 == l2c2) && (l2c2 == l2c3)) ||
+        ((l3c1 != '') && (l3c2 != '') && (l3c3 != '') && (l3c1 == l3c2) && (l3c2 == l3c3)) ||
+        // Verifica coluna
+        ((l1c1 != '') && (l2c1 != '') && (l3c1 != '') && (l1c1 == l2c1) && (l2c1 == l3c1)) ||
+        ((l1c2 != '') && (l2c2 != '') && (l3c2 != '') && (l1c2 == l2c2) && (l2c2 == l3c2)) ||
+        ((l1c3 != '') && (l2c3 != '') && (l3c3 != '') && (l1c3 == l2c3) && (l2c3 == l3c3)) ||
+        // Verifica diagonal
+        ((l1c1 != '') && (l2c2 != '') && (l3c3 != '') && (l1c1 == l2c2) && (l2c2 == l3c3)) ||
+        ((l1c3 != '') && (l2c2 != '') && (l3c1 != '') && (l1c3 == l2c2) && (l2c2 == l3c1))) {
+        alert('Parabéns, ganhou!');
+        resetar()
     }
-
-    movimento = 1 - movimento;
-   console.log(movimento);
 }
 
-function pegarElemento(event){
-    event = event || window.event;
-    event = event.target.id || event.srcElement.id;
 
-    var eleId = event;
-    return eleId;
-}
-// FIX ME
-function resetar(){
-    // var limparElementos = document.querySelectorAll('div.container, div.row, div.col');
-    // return limparElementos.innerHTML = "";
+function resetar() {
+     for (i = 1; i < 4; i++){
+         for(j = 1; j < 4; j++) {
+             idCasa = `l${i}c${j}`;
+             document.getElementById(idCasa).innerHTML = '';
+         }
+     }
 }
