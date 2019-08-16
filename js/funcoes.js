@@ -3,6 +3,8 @@ var movimento = 1;
 var valor = 'X';
 var vitoriaX = 0;
 var vitoriaO = 0;
+var empate = true;
+var empateContador = 0;
 function principal() {
     jogo(casa);
 }
@@ -20,6 +22,7 @@ function jogo(casa){
             } else {
                 valor = 'X';
             }
+            empateContador++;
         }
 }
 
@@ -50,13 +53,19 @@ function verificar(){
           if  (valor == 'O') {
               vitoriaX++;
               document.getElementById('badgeX').innerHTML = vitoriaX;
+              empateContador = 0;
+              empate = false;
           } else{
               vitoriaO++;
             document.getElementById('badgeO').innerHTML = vitoriaO;
+            empateContador = 0;
+            empate = false;
           } 
         resetar()
+    } else if(empate && empateContador == 9) {
+        console.log('empate');
+        empateContador = 0;
     }
-   
 }
 
 
@@ -67,4 +76,5 @@ function resetar() {
              document.getElementById(idCasa).innerHTML = '';
          }
      }
+     empate = true;
 }
