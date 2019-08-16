@@ -1,6 +1,8 @@
 
 var movimento = 1;
 var valor = 'X';
+var vitoriaX = 0;
+var vitoriaO = 0;
 function principal() {
     jogo(casa);
 }
@@ -46,9 +48,11 @@ function verificar(){
         ((l1c1 != '') && (l2c2 != '') && (l3c3 != '') && (l1c1 == l2c2) && (l2c2 == l3c3)) ||
         ((l1c3 != '') && (l2c2 != '') && (l3c1 != '') && (l1c3 == l2c2) && (l2c2 == l3c1))) {
           if  (valor == 'O') {
-              document.getElementById('mostradorVencedor').innerHTML = 'X';
+              vitoriaX++;
+              document.getElementById('badgeX').innerHTML = vitoriaX;
           } else{
-            document.getElementById('mostradorVencedor').innerHTML = 'O';
+              vitoriaO++;
+            document.getElementById('badgeO').innerHTML = vitoriaO;
           } 
         resetar()
     }
