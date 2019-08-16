@@ -11,8 +11,18 @@ body {
 main {
     flex: 1 0 auto;
 }
-/* casas */
+/* Painel indicativo */
+ #badgeX, #badgeO {
+    border-radius: 10px;
+    text-align: center;
+}
+#paraBadgeX, #paraBadgeO{
+    padding-left: 4px;
+    border-radius: 10px;
+    background-color: #a9a9a9;
+}
 
+/* casas */
 .container .col{
     width: 50px;
     height: 80px;
