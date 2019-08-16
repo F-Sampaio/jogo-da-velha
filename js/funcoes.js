@@ -1,4 +1,5 @@
-var movimento = 0;
+
+var movimento = 1;
 var valor = 'X';
 function principal() {
     jogo(casa);
@@ -32,7 +33,7 @@ function verificar(){
     l3c2 = document.getElementById('l3c2').innerHTML;
     l3c3 = document.getElementById('l3c3').innerHTML;
 
-    if (
+    if ( //jogo normal
         // Verifica linha
         ((l1c1 != '') && (l1c2 != '') && (l1c3 != '') && (l1c1 == l1c2) && (l1c2 == l1c3)) ||
         ((l2c1 != '') && (l2c2 != '') && (l2c3 != '') && (l2c1 == l2c2) && (l2c2 == l2c3)) ||
@@ -46,11 +47,12 @@ function verificar(){
         ((l1c3 != '') && (l2c2 != '') && (l3c1 != '') && (l1c3 == l2c2) && (l2c2 == l3c1))) {
           if  (valor == 'O') {
               document.getElementById('mostradorVencedor').innerHTML = 'X';
-          } else {
+          } else{
             document.getElementById('mostradorVencedor').innerHTML = 'O';
-          }
+          } 
         resetar()
     }
+   
 }
 
 

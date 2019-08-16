@@ -5,7 +5,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    padding: 0;
+    /* padding: 0; */
 }
 
 main {
@@ -14,9 +14,14 @@ main {
 /* casas */
 
 .container .col{
+    width: 50px;
     height: 80px;
     border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
 }
+
+
 
 
 #l1c1, #l1c2, #l1c3 {
