@@ -31,7 +31,9 @@ main {
     font-size: 30px;
 }
 
-
+.container .row {
+    margin: 0;
+}
 
 
 #l1c1, #l1c2, #l1c3 {
