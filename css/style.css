@@ -12,11 +12,11 @@ main {
     flex: 1 0 auto;
 }
 /* Painel indicativo */
- #badgeX, #badgeO {
+ #badgeX, #badgeO, #badgeEmpate {
     border-radius: 10px;
     text-align: center;
 }
-#paraBadgeX, #paraBadgeO{
+#paraBadgeX, #paraBadgeO, #paraBadgeEmpate{
     padding-left: 4px;
     border-radius: 10px;
     background-color: #a9a9a9;
@@ -57,7 +57,11 @@ main {
     border-right: none;
 }
 
+/* modal de empate */
 
+#modalEmpate {
+    visibility: hidden;
+}
 
 
 /* rodape */

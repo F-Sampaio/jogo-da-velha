@@ -22,12 +22,14 @@
                         <div class="card-content white-text">
                             <span class="card-title">Jogo da Velha</span>
                             <p id="paraBadgeX"><span class="red darken-1 white-text badge" id="badgeX"></span>X</p><br>
-                            <p id="paraBadgeO"><span class="red darken-1 white-text badge" id="badgeO"></span>O</p>
+                            <p id="paraBadgeO"><span class="red darken-1 white-text badge" id="badgeO"></span>O</p><br>
+                            <p id="paraBadgeEmpate"><span class="red darken-1 white-text badge" id="badgeEmpate"></span>Empate</p>
+
                         </div>
                         <div class="card-action center">
 
 
-                            <a class="waves-effect waves-light btn" id="jogarBtn">Jogar</a>
+                            <!-- <a class="waves-effect waves-light btn" id="jogarBtn">Jogar</a> -->
                             <a class="waves-effect waves-light btn" onclick="resetar()">Resetar</a>
                         </div>
                     </div>
@@ -54,6 +56,13 @@
         </div>
     </main>
 
+    <!-- Só é ativo em caso de empate -->
+    <div className="modal" id="modalEmpate">
+        <div className="modal-content">
+            <h1></h1>
+            <p>Empate!</p>
+        </div>
+    </div>
 
     <footer class="page-footer center">
             <p id="footerText">Design e Desenvolvimento por <a href="https://github.com/F-Sampaio" target="_blank">Franklin Sampaio - 2019</a></p>
@@ -61,5 +70,6 @@
 
 
     <script src="js/funcoes.js"></script>
+
 </body>
 </html>
